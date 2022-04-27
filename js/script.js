@@ -14,7 +14,7 @@ div.innerHTML = `Memorizzare i seguenti numeri: ${arrayRnd} `;
 //aggiungere classe d-block per 30s
 setTimeout(function(){
     div.classList.add('d-none');
-},3 * 1000);
+},30 * 1000);
 
 //dopo 30s visualizzare 5 prompt
 const userResult = document.getElementById('result');
@@ -22,7 +22,7 @@ let userList = [];
 let userN;
 setTimeout(function(){
     for(let i = 0; i < 5; i++){
-        let userN = parseInt(prompt('ciao'));
+        let userN = parseInt(prompt('inserire numeri'));
         
         if(arrayRnd.includes(userN)){
             userList.push(userN);
@@ -32,13 +32,13 @@ setTimeout(function(){
 
     //Output del risultato con quanti numeri indovinati e quali
 
-    if(userList > 0){
+    if(userList.length > 0){
         userResult.innerHTML = `indovinati ${userList.length} numeri, questi numeri sono: ${userList}`;
-    } else{
+    } else {
         userResult.innerHTML = 'indovinati 0 numeri';
     }
 
-},5 * 1000);
+},32 * 1000);
 
 
 
